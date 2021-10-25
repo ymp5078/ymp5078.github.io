@@ -5,7 +5,7 @@
 - 1st Year PhD student in Informatics
 - College of Information Sciences and Technology at Penn State
 
-## Research Interset
+## Research Interests
 
 - Computer Vision
 - Machine Learning
