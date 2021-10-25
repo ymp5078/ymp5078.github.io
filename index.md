@@ -1,3 +1,1 @@
-# **Yimu Pan**
-
-This page is under construction
+![Headshot](/assets/images/headshot_lines.jpeg)
