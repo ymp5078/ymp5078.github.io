@@ -2,7 +2,7 @@
 
 ## About Me
 
-- 1st Year PhD student in Informatics
+- PhD candidate in Informatics
 - College of Information Sciences and Technology at Penn State
 
 ## Research Interests
