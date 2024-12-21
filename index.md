@@ -22,7 +22,7 @@ I hold a B.S. in Computer Science (Summa Cum Laude), as well as B.S. degrees in 
 
 - **Learning Emotion Representations from Verbal and Nonverbal Communication**  
    *CVPR (2023)*  
-   **Authors**: Sitao Zhang*, Yimu Pan*, and James Z. Wang (*Equal contribution)  
+   **Authors**: Sitao Zhang\*, Yimu Pan\*, and James Z. Wang (\*Equal contribution)  
    [GitHub](https://github.com/Xeaver/EmotionCLIP) | [ArXiv](https://arxiv.org/abs/2305.13500)
 
 - **Enhancing Automatic Placenta Analysis through Distributional Feature Recomposition in Vision-Language Contrastive Learning**  
