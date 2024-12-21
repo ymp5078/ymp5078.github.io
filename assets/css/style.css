@@ -21,11 +21,14 @@
   }
   
   .sidebar .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    width: 3em; /* Width relative to the text size */
+    height: 3em; /* Height relative to the text size */
+    border-radius: 50%; /* Keeps the image circular */
+    margin-bottom: 0.5em; /* Spacing below the image relative to text */
+    display: block; /* Ensure proper alignment */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow */
   }
+  
   
   .sidebar h1 {
     font-size: 1.5em;
