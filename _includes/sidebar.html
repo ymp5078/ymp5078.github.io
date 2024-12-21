@@ -7,8 +7,10 @@
     <ul>
       <li>
         📧 Email: 
-        <a href="mailto:{{ site.sidebar.contact.email_primary }}">{{ site.sidebar.contact.email_primary }}</a>, 
-        <a href="mailto:{{ site.sidebar.contact.email_secondary }}">{{ site.sidebar.contact.email_secondary }}</a>
+        <a href="#" onclick="this.nextElementSibling.style.display='inline'; this.style.display='none'; return false;">Click to reveal email</a>
+        <span style="display:none;">
+          <a href="mailto:{{ site.sidebar.contact.email_primary }}">{{ site.sidebar.contact.email_primary }}</a>
+        </span>
       </li>
       <li>
         🌐 GitHub: <a href="{{ site.sidebar.contact.github }}">GitHub</a>

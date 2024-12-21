@@ -21,14 +21,13 @@
   }
   
   .sidebar .profile-pic {
-    width: 3em; /* Width relative to the text size */
-    height: 3em; /* Height relative to the text size */
+    width: 4em; /* Width relative to the text size */
+    height: 4em; /* Height relative to the text size */
     border-radius: 50%; /* Keeps the image circular */
-    margin-bottom: 0.5em; /* Spacing below the image relative to text */
+    margin: 0 auto; /* Center the image */
     display: block; /* Ensure proper alignment */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow */
   }
-  
   
   .sidebar h1 {
     font-size: 1.5em;
@@ -48,5 +47,17 @@
   
   .sidebar ul li {
     margin-bottom: 0.5em;
+  }
+  
+  .sidebar span {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .sidebar span[style*="display:none;"] {
+    opacity: 0;
+  }
+  
+  .sidebar span:not([style*="display:none;"]) {
+    opacity: 1;
   }
   
