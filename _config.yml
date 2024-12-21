@@ -1,3 +1,12 @@
 theme: jekyll-theme-minimal
 title: Yimu Pan's homepage
-description: under construction
+description: Welcome!
+
+# Sidebar Configuration
+sidebar:
+  contact:
+    email_primary: ymp5078@psu.edu
+    email_secondary: yimu1123955008@gmail.com
+    github: https://github.com/ymp5078
+    linkedin: https://www.linkedin.com/in/yimu-pan-669790180/
+    google_scholar: https://scholar.google.com/citations?user=zIM2dLcAAAAJ
