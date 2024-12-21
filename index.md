@@ -10,7 +10,7 @@ I hold a B.S. in Computer Science (Summa Cum Laude), as well as B.S. degrees in 
 
 ## 📝 **Selected Publications**  
 
-- **Semantic Stacking for Robust Semantic Segmentation in Medical Imaging**  
+- **S2S2:Semantic Stacking for Robust Semantic Segmentation in Medical Imaging**  
    *AAAI (2025)*  
    **Authors**: Yimu Pan, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang  
    [GitHub](https://github.com/ymp5078/Semantic-Stacking) | [ArXiv](https://arxiv.org/abs/2412.13156)
