@@ -35,8 +35,8 @@ I hold a B.S. in Computer Science (Summa Cum Laude), as well as B.S. degrees in 
    [GitHub](https://github.com/ymp5078/Semantic-Stacking) | [ArXiv](https://arxiv.org/abs/2412.13156)
 
 - **Cross-Modal Contrastive Learning for Unified Placenta Analysis Using Photographs**  
-   *Patterns (2024)*  
-   [Link](https://www.cell.com/patterns/fulltext/S2666-3899(24)00269-1)
+   *Cell Press Patterns (2024)*  
+   [GitHub](https://github.com/ymp5078/PlacentaCLIP) | [Link](https://www.cell.com/patterns/fulltext/S2666-3899(24)00269-1)
 
 - **Learning Emotion Representations from Verbal and Nonverbal Communication**  
    *CVPR (2023)*  
