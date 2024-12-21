@@ -1,21 +1,7 @@
 <img src="/assets/images/headshot_lines.jpeg" width="15%" height="15%" style="border-radius:50%;">
 
 ---
-
-<table>
-  <tr>
-    <td><h1 style="font-size:2.5em; margin-bottom:0;">Yimu Pan</h1></td>
-    <td align="right" style="text-align:right;">
-      📧 <a href="#" onclick="document.getElementById('email-container').style.display='block'; this.style.display='none';">Click to reveal emails</a>
-      <span id="email-container" style="display:none;">
-        <a href="mailto:ymp5078@psu.edu">ymp5078@psu.edu</a>, 
-        <a href="mailto:yimu1123955008@gmail.com">yimu1123955008@gmail.com</a>
-      </span><br>
-      🌐 <a href="https://github.com/ymp5078">GitHub</a> | <a href="https://www.linkedin.com/in/yimu-pan-669790180/">LinkedIn</a> | <a href="https://scholar.google.com/citations?user=zIM2dLcAAAAJ">Google Scholar</a>
-    </td>
-  </tr>
-</table>
-
+# Yimu Pan
 ---
 
 ## **Summary**
