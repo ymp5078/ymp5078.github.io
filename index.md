@@ -1,6 +1,6 @@
 ## 🧾 **Summary**
 
-I am currently pursuing a Ph.D. in Informatics at the [College of Information Sciences and Technology](https://ist.psu.edu) at The Pennsylvania State University, under the supervision of [Prof. James Z. Wang](https://wang.ist.psu.edu/docs/home.shtml). My research focuses on Computer Vision, Multi-Modality Learning, and Medical Image Analysis, with applications in healthcare, emotion understanding, and AI-assisted clinical tools.
+I am currently pursuing a Ph.D. in Informatics at the [College of Information Sciences and Technology](https://ist.psu.edu) at The Pennsylvania State University, under the supervision of [Prof. James Z. Wang](https://wang.ist.psu.edu/docs/home.shtml). My research focuses on Computer Vision and Multi-Modality Learning with applications in healthcare, emotion understanding, and AI-assisted clinical tools.
 
 I have gained valuable experience through my work as an Applied Scientist Intern at Amazon, focusing on Last Mile applications, and through academic research projects such as developing AI tools for placenta analysis and emotion understanding in natural settings.
 
