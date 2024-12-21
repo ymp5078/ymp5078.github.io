@@ -1,4 +1,4 @@
-## **Summary**
+## 🧾 **Summary**
 
 I am currently pursuing a Ph.D. in Informatics at the [College of Information Sciences and Technology](https://ist.psu.edu) at The Pennsylvania State University, under the supervision of [Prof. James Z. Wang](https://wang.ist.psu.edu/docs/home.shtml). My research focuses on Computer Vision, Multi-Modality Learning, and Medical Image Analysis, with applications in healthcare, emotion understanding, and AI-assisted clinical tools.
 
