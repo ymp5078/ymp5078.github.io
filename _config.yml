@@ -4,6 +4,8 @@ description: Welcome!
 
 # Sidebar Configuration
 sidebar:
+  name: Yimu Pan
+  picture: /assets/images/headshot_lines.jpeg
   contact:
     email_primary: ymp5078@psu.edu
     email_secondary: yimu1123955008@gmail.com
