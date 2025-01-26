@@ -13,7 +13,7 @@ main:
   - title: "AI-SAM: Automatic and Interactive Segment Anything Model"
     authors: <strong>Yimu Pan</strong>, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang
     conference_short: W3PHIAI@AAAI
-    conference: 9th International Workshop on Health Intelligence, in conjunction with the Annual AAAI Conference on Artificial Intelligence <strong>(W3PHIAI@AAAI)</strong>, 2025.
+    conference: The 9th International Workshop on Health Intelligence, in conjunction with the Annual AAAI Conference on Artificial Intelligence <strong>(W3PHIAI@AAAI)</strong>, 2025.
     pdf: https://arxiv.org/abs/2312.03119
     code: https://github.com/ymp5078/AI-SAM
     page: 
@@ -24,7 +24,7 @@ main:
   - title: "VLCD: Vision-Language Contrastive Distillation for Accurate and Efficient Automatic Placenta Analysis"
     authors: Manas Mehta, <strong>Yimu Pan</strong>, Kelly Gallagher, Alison D. Gernand, Jeffery A. Goldstein, Delia Mwinyelle, Leena Mithal and James Z. Wang
     conference_short: W3PHIAI@AAAI
-    conference: 9th International Workshop on Health Intelligence, in conjunction with the Annual AAAI Conference on Artificial Intelligence <strong>(W3PHIAI@AAAI)</strong>, 2025.
+    conference: The 9th International Workshop on Health Intelligence, in conjunction with the Annual AAAI Conference on Artificial Intelligence <strong>(W3PHIAI@AAAI)</strong>, 2025.
     pdf: 
     code: 
     page: 
