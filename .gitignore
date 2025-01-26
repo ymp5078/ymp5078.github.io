@@ -1,4 +1,9 @@
+_site
+.sass-cache
+Gemfile.lock
+*.gem
+.DS_Store
+.jekyll-cache
+git-update.sh
 *vendor
-*_site
-*Gemfile*
-*.bundle*
+*.bundle

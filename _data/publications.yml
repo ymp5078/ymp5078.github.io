@@ -1,0 +1,77 @@
+main:
+
+  - title: S2S2:Semantic Stacking for Robust Semantic Segmentation in Medical Imaging
+    authors: <strong>Yimu Pan</strong>, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang
+    conference_short: AAAI
+    conference: Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2025.
+    pdf: https://arxiv.org/abs/2412.13156
+    code: https://github.com/ymp5078/Semantic-Stacking
+    bibtex: 
+    image: ./assets/img/AAAI25.PNG
+    notes: 
+
+  - title: "AI-SAM: Automatic and Interactive Segment Anything Model"
+    authors: <strong>Yimu Pan</strong>, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang
+    conference_short: W3PHIAI@AAAI
+    conference: 9th International Workshop on Health Intelligence, in conjunction with the Annual AAAI Conference on Artificial Intelligence <strong>(W3PHIAI@AAAI)</strong>, 2025.
+    pdf: https://arxiv.org/abs/2312.03119
+    code: https://github.com/ymp5078/AI-SAM
+    page: 
+    bibtex: 
+    notes: 
+    image: ./assets/img/AAAI25-W3PHIAI.PNG
+
+  - title: "VLCD: Vision-Language Contrastive Distillation for Accurate and Efficient Automatic Placenta Analysis"
+    authors: Manas Mehta, <strong>Yimu Pan</strong>, Kelly Gallagher, Alison D. Gernand, Jeffery A. Goldstein, Delia Mwinyelle, Leena Mithal and James Z. Wang
+    conference_short: W3PHIAI@AAAI
+    conference: 9th International Workshop on Health Intelligence, in conjunction with the Annual AAAI Conference on Artificial Intelligence <strong>(W3PHIAI@AAAI)</strong>, 2025.
+    pdf: 
+    code: 
+    page: 
+    bibtex: 
+    notes: 
+    image: ./assets/img/AAAI25-W3PHIAI-2.PNG
+  
+  - title: "Cross-Modal Contrastive Learning for Unified Placenta Analysis Using Photographs"
+    authors: <strong>Yimu Pan</strong>, Manas Mehta, Jeffery A. Goldstein, Joseph Ngonzi, Lisa M. Bebell, Drucilla J. Roberts, Chrystalle Katte Carreon, Kelly Gallagher, Rachel E. Walker, Alison D. Gernand, and James Z. Wang
+    conference_short: Patterns
+    conference: Cell Press Patterns, 2024.
+    pdf: https://www.cell.com/patterns/fulltext/S2666-3899(24)00269-1
+    code: https://github.com/ymp5078/PlacentaCLIP
+    page: 
+    bibtex: 
+    notes: 
+    image: ./assets/img/Patterns24.jpg
+  
+  - title: "Learning Emotion Representations from Verbal and Nonverbal Communication"
+    authors: Sitao Zhang*, <strong>Yimu Pan*</strong>, and James Z. Wang 
+    conference_short: CVPR
+    conference: The IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2023.
+    pdf: https://arxiv.org/abs/2305.13500
+    code: https://github.com/Xeaver/EmotionCLIP
+    page: 
+    bibtex: 
+    notes: (*Equal contribution)
+    image: ./assets/img/CVPR23.PNG
+
+  - title: "Enhancing Automatic Placenta Analysis through Distributional Feature Recomposition in Vision-Language Contrastive Learning"
+    authors: <strong>Yimu Pan</strong>, Tongan Cai, Manas Mehta, Alison D. Gernand, Jeffery A. Goldstein, Leena Mithal, Delia Mwinyelle, Kelly Gallagher and James Z. Wang
+    conference_short: MICCAI
+    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
+    pdf: https://link.springer.com/chapter/10.1007/978-3-031-43987-2_12
+    code: 
+    page: 
+    bibtex: 
+    notes: 
+    image: ./assets/img/MICCAI23.PNG
+
+  - title: "Vision-Language Contrastive Learning Approach to Robust Automatic Placenta Analysis Using Photographic Images"
+    authors: <strong>Yimu Pan</strong>, Alison D. Gernand, Jeffery A. Goldstein, Leena Mithal, Delia Mwinyelle and James Z. Wang
+    conference_short: MICCAI
+    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2022.
+    pdf: https://link.springer.com/chapter/10.1007/978-3-031-16437-8_68
+    code: 
+    page: 
+    bibtex: 
+    notes: Early Accept
+    image: ./assets/img/MICCAI22.PNG
