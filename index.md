@@ -10,27 +10,32 @@ I hold a B.S. in Computer Science (Summa Cum Laude), as well as B.S. degrees in 
 
 - **S2S2:Semantic Stacking for Robust Semantic Segmentation in Medical Imaging**  
    *AAAI (2025)*  
-   **Authors**: Yimu Pan, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang  
+   **Yimu Pan**, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang  
    [GitHub](https://github.com/ymp5078/Semantic-Stacking) | [ArXiv](https://arxiv.org/abs/2412.13156)
+
+- **AI-SAM: Automatic and Interactive Segment Anything Model**  
+   *AAAI (2025) Workshop on Health Intelligence*  
+   **Yimu Pan**, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang  
+   [GitHub](https://github.com/ymp5078/AI-SAM) | [ArXiv](https://arxiv.org/abs/2312.03119)
 
 - **Cross-Modal Contrastive Learning for Unified Placenta Analysis Using Photographs**  
    *Cell Press Patterns (2024)*  
-   **Authors**: Yimu Pan, Manas Mehta, Jeffery A. Goldstein, Joseph Ngonzi, Lisa M. Bebell, Drucilla J. Roberts, Chrystalle Katte Carreon, Kelly Gallagher, Rachel E. Walker, Alison D. Gernand, and James Z. Wang  
+   **Yimu Pan**, Manas Mehta, Jeffery A. Goldstein, Joseph Ngonzi, Lisa M. Bebell, Drucilla J. Roberts, Chrystalle Katte Carreon, Kelly Gallagher, Rachel E. Walker, Alison D. Gernand, and James Z. Wang  
    [GitHub](https://github.com/ymp5078/PlacentaCLIP) | [Link](https://www.cell.com/patterns/fulltext/S2666-3899(24)00269-1)
 
 - **Learning Emotion Representations from Verbal and Nonverbal Communication**  
    *CVPR (2023)*  
-   **Authors**: Sitao Zhang\*, Yimu Pan\*, and James Z. Wang (\*Equal contribution)  
+   Sitao Zhang\*, **Yimu Pan**\*, and James Z. Wang (\*Equal contribution)  
    [GitHub](https://github.com/Xeaver/EmotionCLIP) | [ArXiv](https://arxiv.org/abs/2305.13500)
 
 - **Enhancing Automatic Placenta Analysis through Distributional Feature Recomposition in Vision-Language Contrastive Learning**  
    *MICCAI (2023)*  
-   **Authors**: Yimu Pan, Tongan Cai, Manas Mehta, Alison D. Gernand, Jeffery A. Goldstein, Leena Mithal, Delia Mwinyelle, Kelly Gallagher and James Z. Wang  
+   **Yimu Pan**, Tongan Cai, Manas Mehta, Alison D. Gernand, Jeffery A. Goldstein, Leena Mithal, Delia Mwinyelle, Kelly Gallagher and James Z. Wang  
    [Link](https://link.springer.com/chapter/10.1007/978-3-031-43987-2_12)
 
 - **Vision-Language Contrastive Learning Approach to Robust Automatic Placenta Analysis Using Photographic Images**  
    *MICCAI (2022)*  
-   **Authors**: Yimu Pan, Alison D. Gernand, Jeffery A. Goldstein, Leena Mithal, Delia Mwinyelle and James Z. Wang  
+   **Yimu Pan**, Alison D. Gernand, Jeffery A. Goldstein, Leena Mithal, Delia Mwinyelle and James Z. Wang  
    [Link](https://link.springer.com/chapter/10.1007/978-3-031-16437-8_68)
 
 ---
