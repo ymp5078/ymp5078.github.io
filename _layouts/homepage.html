@@ -33,6 +33,18 @@
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
+    <script type="text/javascript">
+      function toggleVis(link) {
+        var div = document.getElementById('newsmore');
+        if (div.style.display === 'none') {
+          div.style.display = 'block';
+          link.textContent = 'Show less';
+        } else {
+          div.style.display = 'none';
+          link.textContent = 'Show more';
+        }
+      }
+    </script>
     {% if site.google_analytics %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>

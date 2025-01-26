@@ -13,13 +13,7 @@ I hold a B.S. in Computer Science (Summa Cum Laude), as well as B.S. degrees in 
 - **Computer Vision:** robustness improvement, video understanding, medical image analysis
 - **Multi-Modality Learning:** cross-modal learning, vision-language model, generative model
 
-
-## News
-
-- **[Dec. 2024]** Our work about robust medical image segmentation is accepted to AAAI 2025. Two other papers are accepted to AAAI Workshop on Health Intelligence.
-- **[Dec. 2024]** Our work about placenta analysis using photographs is featured by [Northwestern Now News](https://news.northwestern.edu/stories/2024/12/ai-tool-analyzes-placentas-at-birth-for-faster-detection-of-neonatal-maternal-problems/?fj=) and [Penn State News](https://www.psu.edu/news/research/story/placenta-assessment-tool-aims-improve-neonatal-maternal-care).
-- **[Nov. 2024]** Our work about placenta analysis using photographs is online at Cell Press Patterns.
-- **[Aug. 2024]** Successfully completed my internship at Amazon. Grateful for the support and guidance from all my colleagues.
+{% include_relative _includes/news.md %}
 
 {% include_relative _includes/publications.md %}
 
