@@ -61,3 +61,48 @@
     opacity: 1;
   }
   
+/* Mobile optimization */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack the sidebar and content vertically */
+  }
+
+  .sidebar {
+    width: 90%; /* Make the sidebar narrower for mobile */
+    max-width: 600px; /* Add a max width to prevent it from becoming too large */
+    border-right: none; /* Remove the right border */
+    border-bottom: 1px solid #ddd; /* Add a bottom border instead */
+    padding: 15px;
+    margin: 0 auto; /* Center the sidebar horizontally */
+}
+
+  .content {
+      padding: 15px; /* Reduce padding for better fit on small screens */
+  }
+
+  .sidebar .profile {
+      display: flex; /* Use flexbox for centering */
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Horizontally center items */
+      justify-content: center; /* Vertically center items if needed */
+  }
+
+  .sidebar .profile-pic {
+      width: 5em; /* Slightly larger for mobile */
+      height: 5em;
+      margin: 0; /* Ensure no unintended margin shift */
+  }
+
+  .sidebar h1 {
+      font-size: 1.25em; /* Reduce font size for smaller screens */
+  }
+
+  .sidebar h2 {
+      font-size: 1em; /* Reduce font size for subheadings */
+  }
+
+  .sidebar ul li {
+      font-size: 0.9em; /* Adjust list item font size */
+      margin-bottom: 0.3em; /* Reduce spacing */
+  }
+}
