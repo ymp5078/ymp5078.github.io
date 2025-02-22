@@ -1,8 +1,8 @@
 <h2 style="margin: 60px 0px 10px;">News</h2>
 
 <ul>
-<li><strong>[Jan. 2025]</strong> Our work on placenta analysis using photographs is featured in the podcast episode <a href="https://podcasts.apple.com/us/podcast/unlocking-the-secrets-of-the-placenta-with/id1779600854?i=1000693920468">Making Sense of Pregnancy: What Experts Want you To Know About Your Body</a></li>
-<li><strong>[Jan. 2025]</strong> The code for S2S2 is now available online.</li>
+<li><strong>[Feb. 2025]</strong> Our work on placenta analysis using photographs is featured in the podcast episode <a href="https://podcasts.apple.com/us/podcast/unlocking-the-secrets-of-the-placenta-with/id1779600854?i=1000693920468">Making Sense of Pregnancy: What Experts Want you To Know About Your Body</a></li>
+<li><strong>[Feb. 2025]</strong> The code for S2S2 is now available online.</li>
 <li><strong>[Dec. 2024]</strong> Our work about robust medical image segmentation is accepted to AAAI 2025. Two other papers are accepted to AAAI Workshop on Health Intelligence.</li>
 <li><strong>[Dec. 2024]</strong> Our work about placenta analysis using photographs is featured by <a href="https://news.northwestern.edu/stories/2024/12/ai-tool-analyzes-placentas-at-birth-for-faster-detection-of-neonatal-maternal-problems/?fj=">Northwestern Now News</a> and <a href="https://www.psu.edu/news/research/story/placenta-assessment-tool-aims-improve-neonatal-maternal-care">Penn State News</a>.</li>
 <li><strong>[Oct. 2024]</strong> Our work about placenta analysis using photographs is accepted by Cell Press Patterns. </li>
