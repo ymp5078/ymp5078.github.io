@@ -1,6 +1,7 @@
 <h2 style="margin: 60px 0px 10px;">News</h2>
 
 <ul>
+<li><strong>[Mar. 2025]</strong> Glad to have the opportunity to present <a href="https://csrai.psu.edu/news-events/events/yimu-pan"> our work</a> at the <a href="https://csrai.psu.edu/initiatives/young-achievers"> Young Achievers Symposium</a> hosted by the <a href="https://csrai.psu.edu/"> Center for Socially Responsible Artificial Intelligence</a> at Penn State. Thanks to the organizers for the invitation!</li>
 <li><strong>[Mar. 2025]</strong> It was great to meet so many people at AAAI 2025. See you at future conferences!</li>
 <li><strong>[Mar. 2025]</strong> Our work on placenta analysis using photographs is featured by NIBIB in the article <a href="https://www.nibib.nih.gov/news-events/newsroom/picture-using-ai-analyze-photographs-placenta">"Picture This: Using AI to Analyze Photographs of the Placenta"</a>.</li>
 <li><strong>[Feb. 2025]</strong> Our work on placenta analysis using photographs is featured in the podcast episode <a href="https://podcasts.apple.com/us/podcast/unlocking-the-secrets-of-the-placenta-with/id1779600854?i=1000693920468">"Making Sense of Pregnancy: What Experts Want you To Know About Your Body"</a>.</li>
