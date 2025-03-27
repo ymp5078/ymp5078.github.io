@@ -1,6 +1,6 @@
 main:
 
-  - title: S2S2: Semantic Stacking for Robust Semantic Segmentation in Medical Imaging
+  - title: "S2S2: Semantic Stacking for Robust Semantic Segmentation in Medical Imaging"
     authors: <strong>Yimu Pan</strong>, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang
     conference_short: AAAI
     conference: Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2025.
