@@ -18,4 +18,4 @@ I am currently an Applied Scientist at Mistral AI. I am also pursuing a Ph.D. in
 
 {% include_relative _includes/services.md %}
 
-<sub>Last updated: August 23, 2025</sub>
+<sub>Last updated: Jan 20, 2025</sub>
