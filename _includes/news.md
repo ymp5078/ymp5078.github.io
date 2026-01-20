@@ -1,6 +1,7 @@
 <h2 style="margin: 60px 0px 10px;">News</h2>
 
 <ul>
+<li><strong>[Jan. 2026]</strong> Joined  <a href="https://mistral.ai/">Mistral AI</a> as an Applied Scientist. Excited to push the boundaries of what's possible with AI.</li>
 <li><strong>[Dec. 2025]</strong> Successfully defended my thesis. Thank you to my advisor, committee, colleagues, and the <a href="http://www.placentavision.com">PlacentaVision</a> team for their support.</li>
 <li><strong>[Aug. 2025]</strong> Successfully completed my internship at Dolby. Grateful for the support and guidance from all my colleagues.</li>
 <li><strong>[May. 2025]</strong> Excited to begin my role as an Research Intern at <a href="https://www.dolby.com/"> Dolby</a>.</li>
