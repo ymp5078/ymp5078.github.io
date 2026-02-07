@@ -1,0 +1,162 @@
+/* ============================================================
+   Publications — Windows 98 Theme
+   ============================================================ */
+
+.publications { margin-top: 6px; }
+
+.publications ol.bibliography {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publications ol.bibliography > li { margin-bottom: 0; }
+.publications ol.bibliography > li + li { border-top: 1px solid var(--win-dark); }
+.publications ol.bibliography > br { display: none; }
+
+/* --- Publication Row --- */
+.pub-row {
+  display: flex;
+  gap: 14px;
+  padding: 10px 0;
+  align-items: flex-start;
+  background: var(--win-content-bg);
+  margin: 6px 0;
+  border: 1px solid;
+  border-color: var(--win-dark) var(--win-white) var(--win-white) var(--win-dark);
+  padding: 10px;
+}
+
+/* --- Teaser Image Column --- */
+.pub-row .col-sm-3 {
+  position: relative;
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.pub-row .col-sm-3 img.teaser {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid;
+  border-color: var(--win-dark) var(--win-white) var(--win-white) var(--win-dark);
+  box-shadow: inset 1px 1px 0 var(--win-black);
+  border-radius: 0;
+}
+
+/* --- Badge --- */
+abbr.badge {
+  position: absolute;
+  bottom: 4px;
+  left: 15px;
+  background: var(--win-blue);
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border: 1px outset #aaa;
+  border-radius: 0;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* --- Info Column --- */
+.pub-row .col-sm-9 {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-row .title {
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.pub-row .title a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.pub-row .author {
+  font-size: 0.92em;
+  margin-bottom: 3px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.pub-row .periodical {
+  font-size: 0.92em;
+  font-style: italic;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  color: #555;
+}
+
+:root.dark-theme .pub-row .author { color: #ccc; }
+:root.dark-theme .pub-row .periodical { color: #aaa; }
+:root.dark-theme .pub-row .title a { color: #6699ff; }
+:root.dark-theme abbr.badge { background: #1a3a6a; }
+
+/* --- Link Buttons --- */
+.pub-row .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+.pub-row .links a.btn {
+  background: var(--win-gray);
+  color: var(--win-text);
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 11px !important;
+  padding: 2px 8px;
+  border: 2px solid;
+  border-color: var(--win-light) var(--win-black) var(--win-black) var(--win-light);
+  box-shadow: inset 1px 1px 0 var(--win-white), inset -1px -1px 0 var(--win-dark);
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.pub-row .links a.btn:hover { filter: brightness(1.05); }
+
+.pub-row .links a.btn:active {
+  border-color: var(--win-black) var(--win-light) var(--win-light) var(--win-black);
+  box-shadow: inset 1px 1px 0 var(--win-dark);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 600px) {
+  .pub-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pub-row .col-sm-3 {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .pub-row .col-sm-9 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .pub-row .title { font-size: 1.05em; }
+  .pub-row .author, .pub-row .periodical { font-size: 0.95em; }
+  .pub-row .links a.btn { font-size: 12px !important; padding: 3px 8px; }
+  abbr.badge { font-size: 12px; padding: 3px 8px; }
+}
+
+@media (max-width: 400px) {
+  .pub-row .col-sm-3 { max-width: 200px; }
+  .pub-row .title { font-size: 1em; }
+  .pub-row .author, .pub-row .periodical { font-size: 0.92em; }
+}

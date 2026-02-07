@@ -1,4 +1,4 @@
-<h2 style="margin: 60px 0px 10px;">News</h2>
+<h2 style="margin: 2px 0px 8px;">News</h2>
 
 <ul>
 <li><strong>[Jan. 2026]</strong> Joined  <a href="https://mistral.ai/">Mistral AI</a> as an Applied Scientist. Excited to push the boundaries of what's possible with AI.</li>

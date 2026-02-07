@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ site.title }} | {{site.affiliation}}</title>
+    <title>{{ site.title }} | {{ site.affiliation }}</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,21 +18,22 @@
     <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
     <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    {% if site.font == "Sans Serif" %}
-    <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/font.css">
-    {% endif %}
-    {% if site.auto_dark_mode %}
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/publications.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
-    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
-    {% endif %}
+
+    <script>
+      // Apply saved theme immediately to prevent flash
+      (function() {
+        var saved = localStorage.getItem('emu98-theme');
+        if (saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark-theme');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/css/win98.css">
+    <link rel="stylesheet" href="./assets/css/publications-win98.css">
+
     <script type="text/javascript">
       function toggleVis(link) {
         var div = document.getElementById('newsmore');
@@ -45,91 +46,239 @@
         }
       }
     </script>
+
     {% if site.google_analytics %}
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', '{{ site.google_analytics }}');
     </script>
     {% endif %}
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        
-        {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
-        {% endif %}
 
-        <h1>{{ site.title }}</h1>
-
-        {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
-        <br>
-        {% endif %}
-        {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
-        <br>
-        {% endif %}
-        {% if site.email %}
-        <email>{{ site.email }}</email>
-        {% endif %}
-
-        <br>
-        <br>
-        <div class="social-icons">
-        {% if site.google_scholar %}
-        <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
-          <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
-        </a>  
-        {% endif %}
-
-        {% if site.cv_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
-          <i class="ai ai-cv" style="font-size:1.3rem;"></i>
-        </a>
-        {% endif %}
-
-        {% if site.github_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
-          <i class="fab fa-github"></i>
-        </a>
-        {% endif %}
-
-        {% if site.linkedin %}
-        <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        {% endif %}
-
-        {% if site.twitter %}
-        <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        {% endif %}
-        </div>
-        <br>
-
-      </header>
-      <section>
-
-      {{ content }}
-
-      <br>
-
-      {% if site.enable_footnote %}
-      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
-      {% endif %}
-
-      </section>
-      <footer>
-        
-      </footer>
+    <!-- ======== Boot Screen ======== -->
+    <div class="boot-screen" id="bootScreen">
+      <div class="boot-logo">&#8862; Emu 98</div>
+      <div class="boot-subtitle">Loading {{ site.title }}'s Homepage...</div>
+      <div class="boot-progress">
+        <div class="boot-progress-fill" id="bootProgress"></div>
+      </div>
+      <div class="boot-text" id="bootText">Initializing academic publications...</div>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
+    <!-- ======== Main Window ======== -->
+    <div class="main-window maximized" id="mainWindow" style="display:none;">
+      <div class="window">
+
+        <!-- Title Bar -->
+        <div class="window-titlebar" id="titlebar">
+          <div class="titlebar-left">
+            <span class="titlebar-emoji">&#127891;</span>
+            <span class="window-title">{{ site.title }} - Personal Homepage - Emu Internet Explorer</span>
+          </div>
+          <div class="titlebar-buttons">
+            <button class="title-btn" id="win98-btn-minimize" title="Minimize">_</button>
+            <button class="title-btn" id="win98-btn-maximize" title="Maximize">&#9723;</button>
+            <button class="title-btn" id="win98-btn-close" title="Close">&#10005;</button>
+          </div>
+        </div>
+
+        <!-- Menu Bar -->
+        <div class="window-menubar">
+          <span class="menu-item"><u>F</u>ile</span>
+          <span class="menu-item"><u>E</u>dit</span>
+          <span class="menu-item"><u>V</u>iew</span>
+          <span class="menu-item">F<u>a</u>vorites</span>
+          <span class="menu-item"><u>H</u>elp</span>
+        </div>
+
+        <!-- Address Bar -->
+        <div class="address-bar">
+          <span class="address-label">Address</span>
+          <div class="address-field">
+            <span>&#128196;</span>
+            <span class="address-url">{{ site.canonical | default: "https://ymp5078.github.io/" }}</span>
+          </div>
+          <button class="win-btn address-go-btn">Go</button>
+        </div>
+
+        <!-- Window Body -->
+        <div class="window-body" id="windowBody">
+          <div class="window-content">
+
+            <!-- Marquee -->
+            {% if site.occupation %}
+            <div class="marquee-container">
+              <span class="marquee-text">&#9733; Welcome to {{ site.title }}'s Homepage! &#9733; {{ site.occupation }} &#9733; {{ site.position }} @ {{ site.affiliation }} &#9733; Welcome to {{ site.title }}'s Homepage! &#9733;</span>
+            </div>
+            {% endif %}
+
+            <!-- Profile Section -->
+            <div class="profile-section">
+              <div class="profile-photo">
+                {% if site.avatar %}
+                <img src="{{ site.avatar }}" alt="avatar">
+                {% endif %}
+              </div>
+              <div class="profile-info">
+                <h1>{{ site.title }}</h1>
+                {% if site.position %}
+                <p><strong>{{ site.position }}</strong> @ {{ site.affiliation }}</p>
+                {% endif %}
+                {% if site.email %}
+                <p>&#128231; {{ site.email }}</p>
+                {% endif %}
+                <div class="social-links">
+                  {% if site.google_scholar %}
+                  <a href="{{ site.google_scholar }}" target="_blank" rel="noopener"><button class="win-btn social-btn">&#128218; Scholar</button></a>
+                  {% endif %}
+                  {% if site.github_link %}
+                  <a href="{{ site.github_link }}" target="_blank" rel="noopener"><button class="win-btn social-btn">&#128190; GitHub</button></a>
+                  {% endif %}
+                  {% if site.linkedin %}
+                  <a href="{{ site.linkedin }}" target="_blank" rel="noopener"><button class="win-btn social-btn">&#128101; LinkedIn</button></a>
+                  {% endif %}
+                  {% if site.cv_link %}
+                  <a href="{{ site.cv_link }}" target="_blank" rel="noopener"><button class="win-btn social-btn">&#128196; CV</button></a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            <div class="pixel-separator"></div>
+
+            <!-- Tabs -->
+            <div class="tab-bar">
+              <div class="tab active" data-tab="tab-about">&#128203; About Me</div>
+              <div class="tab" data-tab="tab-news">&#128240; News</div>
+              <div class="tab" data-tab="tab-pubs">&#128221; Publications</div>
+              <div class="tab" data-tab="tab-services">&#128295; Services</div>
+            </div>
+
+            <div class="tab-content">
+              <!-- About Me -->
+              <div class="tab-panel active" id="tab-about">
+                {{ content }}
+
+                <div class="construction">
+                  <div class="construction-stripe"></div>
+                  <span>&#128679;</span>
+                  <span class="blink">Under Construction</span>
+                  <span>&#128679;</span>
+                  <div class="construction-stripe"></div>
+                </div>
+              </div>
+
+              <!-- News -->
+              <div class="tab-panel" id="tab-news">
+                {% include news.md %}
+              </div>
+
+              <!-- Publications -->
+              <div class="tab-panel" id="tab-pubs">
+                {% include publications.md %}
+              </div>
+
+              <!-- Services -->
+              <div class="tab-panel" id="tab-services">
+                {% include services.md %}
+              </div>
+            </div>
+
+            <div class="pixel-separator"></div>
+
+            <!-- Footer -->
+            <div class="win98-footer">
+              <p>
+                <span class="spinning-icon">&#128231;</span>
+                <a href="mailto:{{ site.email | replace: ' (dot) ', '.' | replace: ' (at) ', '@' }}">Email me!</a>
+                <span class="spinning-icon">&#128231;</span>
+              </p>
+              {% if site.enable_footnote %}
+              <p class="footer-note">Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme (Emu98 Edition&#8482;)</p>
+              {% endif %}
+              <p class="footer-note">Best viewed in Emu Internet Explorer 5.0 at 800&#215;600</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="statusbar">
+          <div class="statusbar-section">&#9989; Done</div>
+          <div class="statusbar-section statusbar-zone">&#127760; Internet</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ======== Start Menu ======== -->
+    <div class="win98-start-menu" id="win98-start-menu">
+      <div class="win98-start-menu-banner">
+        <span>Emu98</span>
+      </div>
+      <div class="win98-start-menu-items">
+        {% if site.google_scholar %}
+        <a class="win98-start-menu-item" href="{{ site.google_scholar }}" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i> Google Scholar
+        </a>
+        {% endif %}
+        {% if site.github_link %}
+        <a class="win98-start-menu-item" href="{{ site.github_link }}" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        {% endif %}
+        {% if site.linkedin %}
+        <a class="win98-start-menu-item" href="{{ site.linkedin }}" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        {% endif %}
+        {% if site.cv_link %}
+        <a class="win98-start-menu-item" href="{{ site.cv_link }}" target="_blank" rel="noopener">
+          <i class="ai ai-cv"></i> Curriculum Vitae
+        </a>
+        {% endif %}
+        <hr>
+        <a class="win98-start-menu-item" id="theme-toggle" href="javascript:void(0)">
+          <i class="fas fa-adjust"></i> <span id="theme-toggle-label">Dark Mode</span>
+        </a>
+        <hr>
+        {% if site.email %}
+        <a class="win98-start-menu-item" href="mailto:{{ site.email | replace: ' (dot) ', '.' | replace: ' (at) ', '@' }}">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- ======== Taskbar ======== -->
+    <div class="taskbar" id="taskbar" style="display:none;">
+      <button class="start-btn" id="win98-start-btn">
+        <svg class="win-logo" viewBox="0 0 16 16" width="16" height="16">
+          <rect x="0" y="0" width="7" height="7" fill="#FF0000"/>
+          <rect x="8" y="0" width="7" height="7" fill="#00FF00"/>
+          <rect x="0" y="8" width="7" height="7" fill="#0000FF"/>
+          <rect x="8" y="8" width="7" height="7" fill="#FFFF00"/>
+        </svg>
+        <span>Start</span>
+      </button>
+
+      <div class="taskbar-items">
+        <button class="taskbar-item active" id="win98-task-btn">
+          <span>&#127891;</span>
+          <span>{{ site.title }} - Homepage</span>
+        </button>
+      </div>
+
+      <div class="taskbar-clock">
+        <span class="clock-speaker">&#128266;</span>
+        <span id="win98-clock"></span>
+      </div>
+    </div>
+
+    <script src="./assets/js/win98.js"></script>
+    <script src="./assets/js/emu-pet.js"></script>
   </body>
 </html>

@@ -1,7 +1,8 @@
-# Basic Information 
+# Basic Information
 title: Yimu Pan
-position: Ph.D. Student
-affiliation: Penn State
+position: Applied Scientist
+affiliation: Mistral AI
+occupation: "Applied Scientist at Mistral AI"
 email: yimupan (dot) ai (at) gmail (dot) com
 
 # Search Engine Optimization (SEO)
@@ -28,13 +29,6 @@ favicon_dark: ./assets/img/favicon-dark.png
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
 enable_footnote: true
 
-# Auto Dark Mode
-# You may use the option to disable the automatic dark theme
-auto_dark_mode: true
-
-# Font
-# You can use this option to choose between Serif or Sans Serif fonts.
-font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
