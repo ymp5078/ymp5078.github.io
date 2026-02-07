@@ -60,11 +60,14 @@ a:visited { color: #800080; }
 a:hover { color: #ff0000; }
 
 h1, h2, h3, h4, h5, h6 { color: var(--win-blue); font-weight: bold; }
-h2 { font-size: 1.3em; margin: 14px 0 8px; }
-h4 { font-size: 1.1em; margin: 8px 0 4px; }
-p { margin: 6px 0; line-height: 1.7; }
+h1, h2, h3 { line-height: 1.1; }
+h2 { font-size: 1.57em; margin: 14px 0 8px; }
+h3 { font-size: 1.17em; margin: 10px 0 6px; }
+h4 { font-size: 1em; margin: 8px 0 4px; font-weight: 600; }
+h5, h6 { font-size: 0.95em; font-weight: 600; }
+p { margin: 6px 0; line-height: 1.5; }
 ul, ol { margin: 6px 0 6px 20px; }
-li { margin: 4px 0; line-height: 1.6; }
+li { margin: 4px 0; line-height: 1.5; }
 img { max-width: 100%; }
 strong { font-weight: bold; }
 em { font-style: italic; }
@@ -335,11 +338,12 @@ em { font-style: italic; }
 }
 
 .profile-info h1 {
-  font-size: 36px;
+  font-size: 28px;
   color: var(--win-blue);
   margin-bottom: 4px;
   font-family: 'VT323', 'MS Sans Serif', monospace;
   letter-spacing: 1px;
+  line-height: 1.1;
 }
 
 .profile-info p {
@@ -879,97 +883,101 @@ em { font-style: italic; }
 
 @media (max-width: 600px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
     padding-bottom: 40px;
   }
 
   .window-menubar { display: none; }
 
   .address-bar .win-btn { display: none; }
-  .address-bar { font-size: 15px; padding: 3px 6px; }
-  .address-field { font-size: 15px; }
-  .address-label { font-size: 15px; }
+  .address-bar { font-size: 13px; padding: 3px 6px; }
+  .address-field { font-size: 13px; }
+  .address-label { font-size: 13px; }
 
-  .marquee-container { font-size: 16px; padding: 4px 0; }
+  .marquee-container { font-size: 13px; padding: 4px 0; }
 
   .profile-section {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: 10px;
   }
 
-  .profile-photo { width: 140px; height: 140px; }
+  .profile-photo { width: 120px; height: 120px; }
 
-  .profile-info h1 { font-size: 32px; }
-  .profile-info p { font-size: 16px; }
+  .profile-info h1 { font-size: 24px; }
+  .profile-info p { font-size: 14px; }
 
-  .social-links { justify-content: center; gap: 8px; }
-  .social-btn { font-size: 14px !important; padding: 5px 12px; }
+  .social-links { justify-content: center; gap: 6px; }
+  .social-btn { font-size: 12px !important; padding: 4px 10px; }
 
-  .tab { font-size: 15px; padding: 6px 14px; }
-  .tab.active { padding-bottom: 8px; }
-  .tab-content { padding: 12px; }
+  .tab { font-size: 13px; padding: 5px 12px; }
+  .tab.active { padding-bottom: 7px; }
+  .tab-content { padding: 10px; }
   .tab-bar { padding-left: 2px; }
 
-  .taskbar { height: 40px; }
-  .start-btn { padding: 3px 8px; font-size: 15px; height: 30px; }
-  .start-btn .win-logo { width: 18px; height: 18px; }
-  .taskbar-item { font-size: 14px; padding: 3px 8px; height: 30px; }
-  .taskbar-clock { font-size: 14px; padding: 3px 8px; height: 30px; }
+  h2 { font-size: 1.4em; }
+  h3 { font-size: 1.1em; }
+  h4 { font-size: 0.95em; }
+  p { line-height: 1.4; }
+  li { line-height: 1.4; }
+
+  .taskbar { height: 36px; }
+  .start-btn { padding: 3px 8px; font-size: 13px; height: 28px; }
+  .start-btn .win-logo { width: 16px; height: 16px; }
+  .taskbar-item { font-size: 12px; padding: 3px 8px; height: 28px; }
+  .taskbar-clock { font-size: 12px; padding: 3px 8px; height: 28px; }
   .clock-speaker { display: none; }
 
-  .main-window.maximized { height: calc(100vh - 40px); }
+  .main-window.maximized { height: calc(100vh - 36px); }
 
-  .win98-start-menu { bottom: 40px; width: 240px; font-size: 15px; }
-  .win98-start-menu-item { padding: 8px 14px; gap: 10px; }
-  .win98-start-menu-item i { font-size: 17px; width: 22px; }
+  .win98-start-menu { bottom: 36px; width: 220px; font-size: 13px; }
+  .win98-start-menu-item { padding: 7px 12px; gap: 8px; }
+  .win98-start-menu-item i { font-size: 15px; width: 20px; }
 
-  .window-titlebar { height: 30px; padding: 3px 5px; }
-  .titlebar-emoji { font-size: 18px; }
-  .window-title { font-size: 14px; }
-  .title-btn { width: 20px; height: 18px; font-size: 11px; }
+  .window-titlebar { height: 26px; padding: 2px 5px; }
+  .titlebar-emoji { font-size: 16px; }
+  .window-title { font-size: 12px; }
+  .title-btn { width: 18px; height: 16px; font-size: 10px; }
 
-  .statusbar { font-size: 14px; padding: 3px 6px; }
+  .statusbar { font-size: 12px; padding: 2px 6px; }
 
-  .pixel-separator { margin: 8px 0; }
+  .pixel-separator { margin: 6px 0; }
 
-  h2 { font-size: 1.3em; }
+  .boot-logo { font-size: 32px; }
+  .boot-subtitle { font-size: 14px; }
+  .boot-progress { width: 240px; height: 16px; }
+  .boot-text { font-size: 12px; }
 
-  .boot-logo { font-size: 36px; }
-  .boot-subtitle { font-size: 16px; }
-  .boot-progress { width: 260px; height: 18px; }
-  .boot-text { font-size: 13px; }
+  .win98-dialog { min-width: 280px; max-width: calc(100vw - 20px); }
+  .win98-dialog-body { padding: 12px 14px; }
+  .win98-dialog-text { font-size: 13px; }
+  .win98-dialog-btn { font-size: 13px; padding: 4px 20px; }
 
-  .win98-dialog { min-width: 300px; max-width: calc(100vw - 20px); }
-  .win98-dialog-body { padding: 14px 16px; }
-  .win98-dialog-text { font-size: 15px; }
-  .win98-dialog-btn { font-size: 15px; padding: 5px 24px; }
+  .win98-footer { font-size: 12px; }
+  .footer-note { font-size: 11px; }
 
-  .win98-footer { font-size: 14px; }
-  .footer-note { font-size: 13px; }
-
-  .win-btn { font-size: 14px; padding: 4px 12px; }
+  .win-btn { font-size: 12px; padding: 3px 10px; }
 }
 
 @media (max-width: 400px) {
-  body { font-size: 15px; }
+  body { font-size: 13px; }
 
-  .profile-info h1 { font-size: 28px; }
-  .profile-info p { font-size: 15px; }
-  .profile-photo { width: 120px; height: 120px; }
+  .profile-info h1 { font-size: 22px; }
+  .profile-info p { font-size: 13px; }
+  .profile-photo { width: 100px; height: 100px; }
 
-  .social-btn { font-size: 13px !important; padding: 4px 10px; }
+  .social-btn { font-size: 11px !important; padding: 3px 8px; }
 
-  .tab { font-size: 14px; padding: 5px 10px; }
+  .tab { font-size: 12px; padding: 4px 9px; }
 
   .window-content { padding: 6px; }
-  .tab-content { padding: 10px; }
+  .tab-content { padding: 8px; }
 
-  .taskbar { height: 36px; }
-  .start-btn { font-size: 14px; height: 28px; }
-  .taskbar-item { font-size: 13px; height: 28px; }
-  .taskbar-clock { font-size: 13px; height: 28px; }
-  .main-window.maximized { height: calc(100vh - 36px); }
-  .win98-start-menu { bottom: 36px; }
+  .taskbar { height: 34px; }
+  .start-btn { font-size: 12px; height: 26px; }
+  .taskbar-item { font-size: 11px; height: 26px; }
+  .taskbar-clock { font-size: 11px; height: 26px; }
+  .main-window.maximized { height: calc(100vh - 34px); }
+  .win98-start-menu { bottom: 34px; }
 }

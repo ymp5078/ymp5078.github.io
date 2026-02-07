@@ -1,129 +1,114 @@
-# Minimal Light 主题
+# ymp5078.github.io
 
-[![LICENSE](https://img.shields.io/github/license/yaoyao-liu/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE)
+基于 Jekyll 构建的个人学术主页，采用 Windows 98 桌面风格（Emu 98 主题）。
 
-\[[在线演示](https://minimal-light-theme.yliu.me/)\] \[[繁體中文](https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hant.md) | [English](https://github.com/yaoyao-liu/minimal-light/blob/master/README.md) | [Deutsche](https://github.com/yaoyao-liu/minimal-light/blob/master/README_de.md)\]
- 
-*这个项目包含我主页的源代码. 基于 GitHub 官方主题之一 [minimal](https://github.com/orderedlist/minimal) 创建*
-<br>
-*如果您喜欢这个项目，欢迎您使用和分享*
+基于 Yaoyao Liu 的 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 主题。
+
+```
+        oo
+       ████
+       █◐█        Emu 98
+        ██
+       ██
+     ▓▓▓▓▓▓
+    ▓▓▓▓▓▓▓▓
+   ▓▓▓▓▓▓▓▓▓▓     你的桌面伙伴。
+   ▓▓▓▓▓▓▓▓▓▓     在任务栏上行走、排便、
+    ▓▓▓▓▓▓▓▓▓     种花、回应点击。
+      █ █
+       █  █
+      ██ ██
+```
 
 ## 项目特点
 
-- 简单优雅的学术个人主页模板
-- 基于 Jekyll, 可以在 GitHub Pages 服务下自动部署
-- 基本的搜索引擎优化
-- 移动端适配
-- 支持 Markdown
-- 支持自动的暗黑模式
+- Windows 98 风格桌面，包含启动画面、资源管理器窗口、任务栏和开始菜单
+- 支持暗色模式（开始菜单切换，自动跟随系统偏好）
+- 鸸鹋桌面宠物，在任务栏上行走并具有交互行为
+- 便便生命周期：便便 > 扁平 > 草/消失 > 花/干草 > 干花 > 干茎 > 干草 > 消失
+- 响应式布局，适配移动端和桌面端
+- 论文列表，支持缩略图和链接按钮
+- Jekyll + GitHub Pages 自动部署
 
-## 使用指南
-### 在GitHub上使用
+## 使用此模板
 
-只要在你的项目中添加如下内容的`_config.yml`文件，GitHub Pages 服务就会使用该主题部署网页:
+### 1. Fork 并重命名
+
+Fork 此仓库并重命名为 `your-username.github.io`，然后在仓库设置中启用 GitHub Pages。
+
+### 2. 编辑 `_config.yml` 中的个人信息
 
 ```yaml
-remote_theme: yaoyao-liu/minimal-light
+title: 你的名字
+position: 你的职位
+affiliation: 你的单位
+education: "你的学位，你的大学"
+email: you (at) example (dot) com
+
+google_scholar: https://scholar.google.com/citations?user=YOUR_ID
+github_link: https://github.com/your-username
+linkedin: https://www.linkedin.com/in/your-id/
+
+avatar: ./assets/img/avatar.png
 ```
-请注意：添加上述内容到你的项目，会直接应用这个仓库的所有的默认设置。
 
-如果你希望编辑任何文件（例如：`index.md`)，你仍需要把该文件拷贝到你的项目中。
+### 3. 在 `index.md` 中编写个人简介
 
-你也可以直接 fork 这个仓库(或者[使用这个仓库作为模板](https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template))，然后把名字改为`your-username.github.io`.
+```markdown
+---
+layout: homepage
+---
 
-然后，你可以根据[这里的说明](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)开启这个仓库的GitHub Pages服务。
+## About Me
 
-### 通过Jekyll在本地使用
+在此编写你的简介，支持 Markdown 和 HTML。
 
-*首先你需要安装 [Ruby](https://www.ruby-lang.org/en/) 和 [Jekyll](https://jekyllrb.com/).*
+## Research Interests
 
-克隆这个项目:
-
-```bash
-git clone https://github.com/yaoyao-liu/minimal-light.git
-cd minimal-light
+- **方向A：** 描述
+- **方向B：** 描述
 ```
-安装并运行:
+
+### 4. 在 `_data/publications.yml` 中添加论文
+
+```yaml
+- title: "论文标题"
+  authors: "作者A, <strong>你的名字</strong>, 作者B"
+  venue: "会议或期刊名称, 2024"
+  paper_url: "https://arxiv.org/abs/..."
+  teaser: paper_teaser.png
+```
+
+将缩略图放在 `assets/img/` 目录下。
+
+### 5. 更新其他板块
+
+- `_includes/news.md` — 新闻和公告
+- `_includes/services.md` — 审稿、委员会等
+- `assets/img/` — 替换头像和网站图标
+
+### 6. 部署
+
+推送到 GitHub，你的网站将在 `https://your-username.github.io` 上线。
+
+## 本地开发
+
+安装 [Ruby](https://www.ruby-lang.org/en/) 和 [Jekyll](https://jekyllrb.com/)，然后：
 
 ```bash
 bundle install
-bundle exec jekyll server
+bundle exec jekyll serve --livereload
 ```
-在`localhost`预览网页:
-<http://localhost:4000>. 
-你可以在`_site`文件夹中找到 html 文件.
 
-## 自定义内容
-
-### 配置变量
-
-Minimal Light 主题有以下的变量, 你可以在`_config.yml`文件中修改:
-  
-  ```yaml
-# 基本信息
-title: 你的名字
-position: Ph.D. Student
-affiliation: 你的单位
-email: yourname (at) example.edu
-
-# 搜索引擎优化 (SEO)
-keywords: minimal light
-description: 在这里输入网页描述.
-canonical: https://minimal-light-theme.yliu.me/
-
-# 链接
-google_scholar: https://scholar.google.com/
-cv_link: files/Curriculum_Vitae.pdf
-github_link: https://github.com/
-linkedin: https://www.linkedin.com/
-twitter: https://twitter.com/
-
-# 图片路径
-avatar: ./assets/img/avatar.png
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
-
-# Google Analytics ID
-google_analytics: UA-111540567-4
-  ```
-### 编辑 `index.md`
-
-创建`index.md`并添加你的个人信息(如：发表的论文，研究课题等).
-
-### 网页样式（CSS)
-
-如果你需要修改网页的风格（基于 CSS）:
-
-1. 在你的项目中创建`/assets/css/style.scss`文件
-2. 在该文件的顶端加入如下内容:
-
-    ```scss
-    ---
-    ---
-
-    @import "{{ site.theme }}";
-    ```
-3. 在`@import`那一行添加自定义 CSS (或 Sass)格式
-
-### 网页样式（基于 html）
-
-如果你需要修改网页的 html 样式:
-
-1. 从本项目中[复制原始模板](https://github.com/yaoyao-liu/minimal-light/blob/master/_layouts/homepage.html)<br />(*小提示: 点击"raw"可以直接显示原始文件, 拷贝起来更方便*)
-2. 在你的项目中创建`/_layouts/homepage.html`文件
-3. 把第一步中复制的原始模板粘贴进去
-4. 根据自己的需求修改 html 文件
+访问 [http://localhost:4000](http://localhost:4000) 预览。
 
 ## 许可证
 
-这个项目使用 [Creative Commons Zero v1.0 Universal](https://github.com/yaoyao-liu/minimal-light/blob/master/LICENSE) 许可证.
+[Creative Commons Zero v1.0 Universal](LICENSE)
 
 ## 致谢
 
-我们的项目用到了以下项目的源代码:
-
-* [pages-themes/minimal](https://github.com/pages-themes/minimal)
-
-* [orderedlist/minimal](https://github.com/orderedlist/minimal)
-
-* [al-folio](https://github.com/alshedivat/al-folio)
+- [yaoyao-liu/minimal-light](https://github.com/yaoyao-liu/minimal-light) - 基础主题
+- [pages-themes/minimal](https://github.com/pages-themes/minimal)
+- [orderedlist/minimal](https://github.com/orderedlist/minimal)
+- [al-folio](https://github.com/alshedivat/al-folio)
