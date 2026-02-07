@@ -217,8 +217,19 @@
     });
   }
 
+  function isMobile() {
+    // Check for touch-only device (no fine pointer like mouse)
+    var touch = window.matchMedia('(pointer: coarse)').matches;
+    var small = window.innerWidth <= 600 || window.innerHeight <= 600;
+    return touch || small;
+  }
+
   if (maximizeBtn) {
     maximizeBtn.addEventListener('click', function () {
+      if (isMobile()) {
+        showDialog('Emu Internet Explorer', '&#128187;', 'Your screen is too small for windowed mode.');
+        return;
+      }
       if (mainWindow.classList.contains('maximized')) {
         animateUnmaximize();
       } else {
@@ -323,7 +334,7 @@
   // --- Drag ---
   if (titlebar) {
     titlebar.addEventListener('mousedown', function (e) {
-      if (animating) return;
+      if (animating || isMobile()) return;
       if (e.target.closest('.titlebar-buttons')) return;
       dragging = true;
       if (mainWindow.classList.contains('maximized')) {
@@ -435,6 +446,7 @@
   // Double-click title bar to maximize/unmaximize
   if (titlebar) {
     titlebar.addEventListener('dblclick', function (e) {
+      if (isMobile()) return;
       if (e.target.closest('.titlebar-buttons')) return;
       if (mainWindow.classList.contains('maximized')) {
         animateUnmaximize();

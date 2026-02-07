@@ -584,7 +584,15 @@
   }
 
   // Hint bubble: [_] [□] [×] with red arrow toggling between first two
+  // On mobile: show all three [_] [□] [×] but arrow only points at minimize
+  function isMobileEmu() {
+    var touch = window.matchMedia('(pointer: coarse)').matches;
+    var small = window.innerWidth <= 600 || window.innerHeight <= 600;
+    return touch || small;
+  }
+
   function showHintBubble() {
+    var mobile = isMobileEmu();
     var W = 27, H = 15, s = SCALE;
     var c = document.createElement('canvas');
     c.width = W * s; c.height = H * s;
@@ -616,23 +624,26 @@
     bpx(ctx, 20, 10, '#000'); bpx(ctx, 22, 10, '#000');
     bpx(ctx, 19, 11, '#000'); bpx(ctx, 23, 11, '#000');
 
-    // Red arrow pointing at minimize or maximize, toggles on each click
+    // Red arrow: on mobile always points at minimize, on desktop toggles min/max
     placeBubble(c);
     hintCtx = ctx;
     hintW = W;
+    hintMobile = mobile;
     drawHintArrow();
   }
 
   var hintCtx = null;
   var hintW = 0;
+  var hintMobile = false;
   var arrowTarget = 0;
 
   function drawHintArrow() {
     if (!hintCtx) return;
-    var centers = [5, 13];
+    var centers = [5, 13]; // minimize, maximize
+    var idx = hintMobile ? 0 : arrowTarget;
     // Clear arrow area (rows 2-5)
     brect(hintCtx, 1, 2, hintW - 2, 4, '#fff');
-    var cx = centers[arrowTarget];
+    var cx = centers[idx];
     // V-chevron pointing down
     bpx(hintCtx, cx - 2, 2, '#ff0000'); bpx(hintCtx, cx + 2, 2, '#ff0000');
     bpx(hintCtx, cx - 1, 3, '#ff0000'); bpx(hintCtx, cx + 1, 3, '#ff0000');
@@ -649,8 +660,8 @@
       clickResetTimer = setTimeout(function () { hideClicks = 0; hintCtx = null; }, 3000);
       if (hideClicks >= 3) {
         if (hintCtx) {
-          // Already showing hint — toggle arrow and reset timeout
-          arrowTarget = 1 - arrowTarget;
+          // Already showing hint — toggle arrow on desktop, keep on minimize on mobile
+          if (!isMobileEmu()) arrowTarget = 1 - arrowTarget;
           drawHintArrow();
           if (bubbleTimer) clearTimeout(bubbleTimer);
           bubbleTimer = setTimeout(function () { clearBubble(); }, 2000);

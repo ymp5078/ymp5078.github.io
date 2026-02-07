@@ -110,9 +110,9 @@
           <div class="window-content">
 
             <!-- Marquee -->
-            {% if site.occupation %}
+            {% if site.position %}
             <div class="marquee-container">
-              <span class="marquee-text">&#9733; Welcome to {{ site.title }}'s Homepage! &#9733; {{ site.occupation }} &#9733; {{ site.position }} @ {{ site.affiliation }} &#9733; Welcome to {{ site.title }}'s Homepage! &#9733;</span>
+              <span class="marquee-text">&#9733; Welcome to {{ site.title }}'s Homepage! &#9733; {{ site.position }} @ {{ site.affiliation }} &#9733; {{ site.education }} &#9733; Welcome to {{ site.title }}'s Homepage! &#9733;</span>
             </div>
             {% endif %}
 
@@ -127,6 +127,9 @@
                 <h1>{{ site.title }}</h1>
                 {% if site.position %}
                 <p><strong>{{ site.position }}</strong> @ {{ site.affiliation }}</p>
+                {% endif %}
+                {% if site.education %}
+                <p>&#127891; {{ site.education }}</p>
                 {% endif %}
                 {% if site.email %}
                 <p>&#128231; {{ site.email }}</p>
@@ -162,14 +165,6 @@
               <!-- About Me -->
               <div class="tab-panel active" id="tab-about">
                 {{ content }}
-
-                <div class="construction">
-                  <div class="construction-stripe"></div>
-                  <span>&#128679;</span>
-                  <span class="blink">Under Construction</span>
-                  <span>&#128679;</span>
-                  <div class="construction-stripe"></div>
-                </div>
               </div>
 
               <!-- News -->

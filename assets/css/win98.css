@@ -437,35 +437,6 @@ em { font-style: italic; }
   position: relative;
 }
 
-/* --- Construction Banner --- */
-.construction {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
-  margin: 14px 0;
-  font-family: 'VT323', monospace;
-  font-size: 18px;
-  color: #ff0000;
-}
-
-.construction-stripe {
-  height: 12px;
-  flex: 1;
-  background: repeating-linear-gradient(
-    45deg,
-    #000000, #000000 8px,
-    #ffcc00 8px, #ffcc00 16px
-  );
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.blink { animation: blink 1s step-end infinite; }
-
 
 /* --- Win98 Dialog Box --- */
 .win98-dialog-overlay {
@@ -685,11 +656,17 @@ em { font-style: italic; }
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 250px;
+  min-width: 0;
+  flex: 0 1 auto;
   display: flex;
   align-items: center;
   gap: 5px;
   color: var(--win-text);
+}
+
+.taskbar-item span {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .taskbar-item.active {
@@ -938,7 +915,7 @@ em { font-style: italic; }
   .taskbar { height: 40px; }
   .start-btn { padding: 3px 8px; font-size: 15px; height: 30px; }
   .start-btn .win-logo { width: 18px; height: 18px; }
-  .taskbar-item { font-size: 14px; padding: 3px 8px; height: 30px; max-width: 180px; }
+  .taskbar-item { font-size: 14px; padding: 3px 8px; height: 30px; }
   .taskbar-clock { font-size: 14px; padding: 3px 8px; height: 30px; }
   .clock-speaker { display: none; }
 
@@ -969,8 +946,6 @@ em { font-style: italic; }
   .win98-dialog-text { font-size: 15px; }
   .win98-dialog-btn { font-size: 15px; padding: 5px 24px; }
 
-  .construction { font-size: 16px; }
-
   .win98-footer { font-size: 14px; }
   .footer-note { font-size: 13px; }
 
@@ -993,7 +968,7 @@ em { font-style: italic; }
 
   .taskbar { height: 36px; }
   .start-btn { font-size: 14px; height: 28px; }
-  .taskbar-item { font-size: 13px; height: 28px; max-width: 140px; }
+  .taskbar-item { font-size: 13px; height: 28px; }
   .taskbar-clock { font-size: 13px; height: 28px; }
   .main-window.maximized { height: calc(100vh - 36px); }
   .win98-start-menu { bottom: 36px; }
