@@ -177,7 +177,7 @@
     emuEl = mkCanvas(W, H);
     emuEl.id = 'emu-pet';
     emuEl.style.cssText = 'position:fixed;z-index:10001;cursor:pointer;display:none;image-rendering:pixelated;pointer-events:auto;';
-    petLayer.appendChild(emuEl);
+    document.body.appendChild(emuEl);
     emuCtx = emuEl.getContext('2d');
 
     emu.x = Math.random() * (innerWidth - emuEl.width);
