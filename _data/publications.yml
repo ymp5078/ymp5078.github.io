@@ -8,7 +8,7 @@ main:
     code:
     bibtex:
     image: ./assets/img/ICASSP26.PNG
-    notes:
+    notes: Oral Presentation
 
   - title: "S2S2: Semantic Stacking for Robust Semantic Segmentation in Medical Imaging"
     authors: <strong>Yimu Pan</strong>, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang
@@ -61,7 +61,7 @@ main:
     code: https://github.com/Xeaver/EmotionCLIP
     page: 
     bibtex: 
-    notes: (*Equal contribution)
+    notes: "*Equal contribution"
     image: ./assets/img/CVPR23.PNG
 
   - title: "Enhancing Automatic Placenta Analysis through Distributional Feature Recomposition in Vision-Language Contrastive Learning"
