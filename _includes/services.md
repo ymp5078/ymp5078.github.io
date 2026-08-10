@@ -15,10 +15,12 @@
 </ul>
 
 <ul style="margin:0 0 5px;">
-  <li>Conference on Neural Information Processing Systems (NeurIPS)</li>
+  <li>European Conference on Computer Vision (ECCV)</li>
 </ul>
 
-
+<ul style="margin:0 0 5px;">
+  <li>Conference on Neural Information Processing Systems (NeurIPS)</li>
+</ul>
 
 <!-- <h4 style="margin:0 10px 0;">Journal Reviewers</h4>
 
