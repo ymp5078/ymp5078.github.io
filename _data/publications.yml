@@ -1,5 +1,15 @@
 main:
 
+  - title: "RulerNet: Learning Perspective-Invariant Ruler Representations for Robust Image Scale Estimation"
+    authors: <strong>Yimu Pan</strong>, Manas Mehta, Gwen Sincerbeaux, Jeffery A. Goldstein, Alison D. Gernand, and James Z. Wang
+    conference_short: CMIG
+    conference: Computerized Medical Imaging and Graphics <strong>(CMIG)</strong>, 2026.
+    pdf: https://doi.org/10.1016/j.compmedimag.2026.102805
+    code: https://github.com/ymp5078/RulerNet
+    bibtex:
+    image: ./assets/img/RulerNet26.png
+    notes:
+
   - title: "Sparse-View Visual-Acoustic Latent Learning for Novel-View Audio Synthesis"
     authors: <strong>Yimu Pan</strong>, James Z. Wang, and Lie Lu
     conference_short: ICASSP
