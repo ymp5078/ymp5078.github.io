@@ -59,8 +59,8 @@ main:
     pdf: https://www.cell.com/patterns/fulltext/S2666-3899(24)00269-1
     code: https://github.com/ymp5078/PlacentaCLIP
     page: 
-    bibtex: 
-    notes: 
+    bibtex:
+    notes: Featured Cover Article
     image: ./assets/img/Patterns24.jpg
   
   - title: "Learning Emotion Representations from Verbal and Nonverbal Communication"
