@@ -296,20 +296,13 @@ em { font-style: italic; }
   font-weight: bold;
   font-family: 'VT323', monospace;
   font-size: 18px;
-  padding: 5px 0;
-  overflow: hidden;
-  white-space: nowrap;
+  padding: 5px 10px;
+  text-align: center;
   margin-bottom: 10px;
 }
 
 .marquee-text {
   display: inline-block;
-  animation: marquee 20s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
 }
 
 /* --- Profile Section --- */

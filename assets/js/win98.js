@@ -175,22 +175,21 @@
     });
   }
 
-  // --- Taskbar Clock ---
+  // --- Taskbar Clock (always Pacific Time, the site owner's timezone) ---
   var clockEl = document.getElementById('win98-clock');
 
   function updateClock() {
     if (!clockEl) return;
-    var now = new Date();
-    var h = now.getHours();
-    var m = now.getMinutes();
-    var ampm = h >= 12 ? 'PM' : 'AM';
-    h = h % 12;
-    if (h === 0) h = 12;
-    var mm = m < 10 ? '0' + m : m;
-    var month = now.getMonth() + 1;
-    var day = now.getDate();
-    var year = now.getFullYear();
-    clockEl.textContent = month + '/' + day + '/' + year + ' ' + h + ':' + mm + ' ' + ampm;
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Los_Angeles',
+      month: 'numeric', day: 'numeric', year: 'numeric',
+      hour: 'numeric', minute: '2-digit', hour12: true,
+      timeZoneName: 'short'
+    }).formatToParts(new Date());
+    var v = {};
+    parts.forEach(function (p) { v[p.type] = p.value; });
+    clockEl.textContent = v.month + '/' + v.day + '/' + v.year + ' ' +
+      v.hour + ':' + v.minute + ' ' + (v.dayPeriod || '') + ' ' + (v.timeZoneName || '');
   }
 
   updateClock();
