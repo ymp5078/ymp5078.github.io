@@ -1,5 +1,17 @@
 main:
 
+  - title: "studentSplat: Your Student Model Learns Single-view 3D Gaussian Splatting"
+    authors: <strong>Yimu Pan</strong>, Hongda Mao, Qingshuang Chen, Yelin Kim
+    conference_short: arXiv
+    conference: arXiv preprint, 2026.
+    pdf: https://arxiv.org/abs/2601.11772
+    code:
+    bibtex:
+    image: ./assets/img/studentSplat26.png
+    notes:
+    tags: [3D Vision]
+    description: "studentSplat is a feed-forward approach to reconstructing 3D scenes from a single image. By learning from multi-view teacher supervision during training, the model addresses ambiguities in single-view reconstruction while requiring only one input view at inference."
+
   - title: "RulerNet: Learning Perspective-Invariant Ruler Representations for Robust Image Scale Estimation"
     authors: <strong>Yimu Pan</strong>, Manas Mehta, Gwen Sincerbeaux, Jeffery A. Goldstein, Alison D. Gernand, and James Z. Wang
     conference_short: CMIG
@@ -9,6 +21,8 @@ main:
     bibtex:
     image: ./assets/img/RulerNet26.png
     notes:
+    tags: [Computer Vision, Medical AI]
+    description: "A learning-based approach to automatically estimating physical scale from arbitrary rulers in images. Unlike methods that require standardized rulers or controlled imaging conditions, RulerNet handles diverse ruler designs and perspectives, enabling reliable real-world measurements from ordinary photographs."
 
   - title: "Sparse-View Visual-Acoustic Latent Learning for Novel-View Audio Synthesis"
     authors: <strong>Yimu Pan</strong>, James Z. Wang, and Lie Lu
@@ -19,6 +33,8 @@ main:
     bibtex:
     image: ./assets/img/ICASSP26.PNG
     notes: Oral Presentation
+    tags: [Audio, Multimodal]
+    description: "A transformer-based framework for synthesizing spatial audio at unseen viewpoints from sparse audio-visual observations. By learning spatial acoustic representations across different views, the model generates binaural audio that adapts to the listener's position and orientation."
 
   - title: "S2S2: Semantic Stacking for Robust Semantic Segmentation in Medical Imaging"
     authors: <strong>Yimu Pan</strong>, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang
@@ -29,6 +45,8 @@ main:
     bibtex: 
     image: ./assets/img/AAAI25.PNG
     notes: 
+    tags: [Computer Vision, Medical AI]
+    description: "Semantic Stacking is a training strategy that improves the robustness of medical image segmentation models. By learning from multiple semantic representations, the method improves segmentation accuracy and generalization across different medical imaging datasets."
 
   - title: "AI-SAM: Automatic and Interactive Segment Anything Model"
     authors: <strong>Yimu Pan</strong>, Sitao Zhang, Alison D. Gernand, Jeffery A. Goldstein, and James Z. Wang
@@ -40,6 +58,8 @@ main:
     bibtex: 
     notes: 
     image: ./assets/img/AAAI25-W3PHIAI.PNG
+    tags: [Computer Vision, Medical AI]
+    description: "Extends the Segment Anything Model to support both automatic and interactive medical image segmentation. The framework incorporates task-specific semantic information to generate accurate segmentation masks while retaining the flexibility of interactive prompting."
 
   - title: "VLCD: Vision-Language Contrastive Distillation for Accurate and Efficient Automatic Placenta Analysis"
     authors: Manas Mehta, <strong>Yimu Pan</strong>, Kelly Gallagher, Alison D. Gernand, Jeffery A. Goldstein, Delia Mwinyelle, Leena Mithal and James Z. Wang
@@ -51,6 +71,8 @@ main:
     bibtex: 
     notes: 
     image: ./assets/img/AAAI25-W3PHIAI-2.PNG
+    tags: [Multimodal, Medical AI]
+    description: "Explores vision-language knowledge distillation for automatic placenta analysis, transferring information from larger multimodal representations into a more efficient model. The approach aims to retain strong predictive performance while reducing the computational requirements of placenta image analysis."
   
   - title: "Cross-Modal Contrastive Learning for Unified Placenta Analysis Using Photographs"
     authors: <strong>Yimu Pan</strong>, Manas Mehta, Jeffery A. Goldstein, Joseph Ngonzi, Lisa M. Bebell, Drucilla J. Roberts, Chrystalle Katte Carreon, Kelly Gallagher, Rachel E. Walker, Alison D. Gernand, and James Z. Wang
@@ -62,6 +84,8 @@ main:
     bibtex:
     notes: Featured Cover Article
     image: ./assets/img/Patterns24.jpg
+    tags: [Multimodal, Medical AI]
+    description: "A vision-language framework that learns from paired placental photographs and pathology reports to support automatic assessment of placental conditions. Using a large clinical dataset, the study investigates how multimodal learning and robustness-oriented training improve predictive performance under diverse imaging conditions."
   
   - title: "Learning Emotion Representations from Verbal and Nonverbal Communication"
     authors: Sitao Zhang*, <strong>Yimu Pan*</strong>, and James Z. Wang 
@@ -73,6 +97,8 @@ main:
     bibtex: 
     notes: "*Equal contribution"
     image: ./assets/img/CVPR23.PNG
+    tags: [Multimodal, Computer Vision]
+    description: "A multimodal framework for learning emotion representations from verbal and nonverbal communication. By combining visual, linguistic, and contextual information through contrastive learning, the approach captures complementary emotional cues for improved emotion understanding."
 
   - title: "Enhancing Automatic Placenta Analysis through Distributional Feature Recomposition in Vision-Language Contrastive Learning"
     authors: <strong>Yimu Pan</strong>, Tongan Cai, Manas Mehta, Alison D. Gernand, Jeffery A. Goldstein, Leena Mithal, Delia Mwinyelle, Kelly Gallagher and James Z. Wang
@@ -84,6 +110,8 @@ main:
     bibtex: 
     notes: 
     image: ./assets/img/MICCAI23.PNG
+    tags: [Medical AI, Multimodal]
+    description: "Distributional Feature Recomposition improves vision-language contrastive learning for placenta image analysis. By restructuring learned feature representations, the method enhances the model's ability to capture clinically relevant information from paired images and reports."
 
   - title: "Vision-Language Contrastive Learning Approach to Robust Automatic Placenta Analysis Using Photographic Images"
     authors: <strong>Yimu Pan</strong>, Alison D. Gernand, Jeffery A. Goldstein, Leena Mithal, Delia Mwinyelle and James Z. Wang
@@ -95,3 +123,5 @@ main:
     bibtex: 
     notes: Early Accept
     image: ./assets/img/MICCAI22.PNG
+    tags: [Medical AI, Multimodal]
+    description: "Investigates vision-language contrastive learning for automatic placental assessment using photographic images and pathology reports. The framework learns transferable image representations from multimodal supervision, enabling prediction of clinically relevant placental conditions without requiring manual image annotations."

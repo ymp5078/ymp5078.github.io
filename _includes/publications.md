@@ -1,11 +1,9 @@
-<h2 id="publications" style="margin: 2px 0px 8px;">Publications</h2>
-
 <div class="publications">
 <ol class="bibliography">
 
 {% for link in site.data.publications.main %}
 
-<li>
+<li data-tags="{{ link.tags | join: '|' }}" data-search="{{ link.title }} {{ link.authors | strip_html }} {{ link.conference | strip_html }} {{ link.tags | join: ' ' }} {{ link.notes }}{{ link.conference_short }}" data-year="{{ link.year | default: 2026 }}">
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     {% if link.image %} 
@@ -20,6 +18,9 @@
       <div class="author">{{ link.authors }}</div>
       <div class="periodical"><em>{{ link.conference }}</em>
       </div>
+    {% if link.description %}
+      <div class="pub-desc">{{ link.description }}</div>
+    {% endif %}
     <div class="links">
       {% if link.pdf %} 
       <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>

@@ -1,0 +1,71 @@
+main:
+
+  - title: "Mistral Large 4"
+    authors: Mistral AI (including <strong>Yimu Pan</strong>)
+    conference_short: Mistral
+    conference: Technical Report, October 2026.
+    pdf: https://mistral.ai/news/mistral-large-4/
+    image: ./assets/img/MistralLarge4.jpg
+    notes:
+    tags: [Multimodal, Foundation Models]
+    description: "Mistral Large 4 is a trillion-parameter multimodal mixture-of-experts model designed for advanced reasoning, coding, and long-horizon agentic tasks. It combines large-scale model training with efficient inference techniques to support complex workflows involving text, images, and tool interactions."
+
+  - title: "Timestral"
+    authors: Mistral AI (including <strong>Yimu Pan</strong>)
+    conference_short: Mistral
+    conference: Technical Report, October 2026.
+    pdf: https://arxiv.org/abs/2610.37585
+    image: ./assets/img/Timestral26.jpg
+    notes:
+    tags: [Time Series, Foundation Models]
+    description: "Timestral introduces a family of foundation models for probabilistic time-series forecasting. Through decoupled horizon forecasting, support for future covariates, and large-scale synthetic pretraining, the models deliver strong forecasting performance across diverse time-series benchmarks."
+
+  - title: "Shieldstral"
+    authors: Mistral AI (including <strong>Yimu Pan</strong>)
+    conference_short: Mistral
+    conference: Technical Report, July 2026.
+    pdf: https://arxiv.org/abs/2607.25857
+    image: ./assets/img/Shieldstral26.jpg
+    notes: Primary Contributor
+    tags: [Safety, Multimodal]
+    description: "Shieldstral is a compact, policy-adaptive multimodal safety classifier designed to identify unsafe content across text and images. By formulating content moderation as a unified binary question-answering task, it supports flexible safety policies while achieving competitive performance against much larger models."
+
+  - title: "Robostral Navigate"
+    authors: Mistral AI (including <strong>Yimu Pan</strong>)
+    conference_short: Mistral
+    conference: Technical Report, July 2026.
+    pdf: https://arxiv.org/abs/2607.20785
+    image: ./assets/img/Robostral26.jpg
+    notes:
+    tags: [Robotics, Multimodal]
+    description: "Robostral Navigate is a vision-language model for robotic navigation using only monocular RGB observations. By predicting navigation waypoints directly in image space, the approach reduces dependence on specialized sensors and robot-specific coordinate systems, enabling generalization across different robotic platforms."
+
+  - title: "Phoenix-VL 1.5 Medium Technical Report"
+    authors: Team Phoenix (HTX) &amp; Mistral AI (including <strong>Yimu Pan</strong>)
+    conference_short: Phoenix
+    conference: Technical Report, May 2026.
+    pdf: https://arxiv.org/abs/2605.10391
+    image: ./assets/img/PhoenixVL26.jpg
+    notes:
+    tags: [Multimodal]
+    description: "Phoenix-VL 1.5 Medium is a multilingual and multimodal foundation model adapted to Singapore's languages, culture, and institutional context. Through continued pretraining and targeted post-training, the model improves regional knowledge and understanding while preserving broad capabilities in reasoning and multimodal tasks."
+
+  - title: "Voxtral TTS"
+    authors: Mistral AI (including <strong>Yimu Pan</strong>)
+    conference_short: Mistral
+    conference: Technical Report, March 2026.
+    pdf: https://arxiv.org/abs/2603.25551
+    image: ./assets/img/VoxtralTTS26.jpg
+    notes:
+    tags: [Audio, Multimodal]
+    description: "Voxtral TTS is an expressive multilingual text-to-speech model that generates natural-sounding speech from text and a short reference audio clip. It combines autoregressive semantic token generation with flow-matching-based acoustic modeling to support high-quality speech synthesis and voice adaptation."
+
+  - title: "Voxtral Realtime"
+    authors: Mistral AI (including <strong>Yimu Pan</strong>)
+    conference_short: Mistral
+    conference: Technical Report, February 2026.
+    pdf: https://arxiv.org/abs/2602.11298
+    image: ./assets/img/VoxtralRealtime26.jpg
+    notes:
+    tags: [Audio, Multimodal]
+    description: "Voxtral Realtime is a streaming speech recognition model designed for accurate transcription with sub-second latency. Unlike conventional chunk-based approaches, it uses a causal architecture trained specifically for streaming, enabling real-time transcription without sacrificing recognition quality."

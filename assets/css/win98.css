@@ -378,19 +378,34 @@ em { font-style: italic; }
   opacity: 0.3;
 }
 
-/* --- Tabs --- */
+/* --- Tabs (floating section nav, sticky inside the window body) --- */
 .tab-bar {
   display: flex;
   gap: 0;
-  margin-bottom: -2px;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--win-gray);
+  padding: 4px 4px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   padding-left: 4px;
   overflow-x: auto;
   scrollbar-width: none;
 }
 
 .tab-bar::-webkit-scrollbar { display: none; }
+
+a.tab {
+  text-decoration: none;
+  color: var(--win-text);
+}
+a.tab:visited { color: var(--win-text); }
+a.tab:hover { color: var(--win-text); }
+:root.dark-theme a.tab, :root.dark-theme a.tab:visited, :root.dark-theme a.tab:hover { color: var(--win-text); }
+
+/* Sections scroll clear of the sticky bar */
+.content-section { scroll-margin-top: 56px; }
 
 .tab {
   background: var(--win-dark);
@@ -432,6 +447,7 @@ em { font-style: italic; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 .tab-panel ul { list-style-position: inside; }
+.content-section ul { list-style-position: inside; }
 
 /* --- Group Box --- */
 .group-box {

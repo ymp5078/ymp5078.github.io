@@ -41,18 +41,120 @@
     }
   }, 45);
 
-  // --- Tab Switching ---
-  var tabs = document.querySelectorAll('.tab');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var targetId = tab.getAttribute('data-tab');
-      document.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('active'); });
-      document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
-      tab.classList.add('active');
-      var panel = document.getElementById(targetId);
-      if (panel) panel.classList.add('active');
+  // --- Floating Section Nav: scroll-spy + smooth scroll ---
+  var navBar = document.getElementById('sectionNav');
+  var scrollBox = document.getElementById('windowBody');
+
+  if (navBar && scrollBox) {
+    var navTabs = Array.prototype.slice.call(navBar.querySelectorAll('.tab'));
+    var navSections = navTabs.map(function (a) {
+      return document.getElementById(a.getAttribute('href').slice(1));
+    }).filter(Boolean);
+    var navClickUntil = 0;
+
+    function activateSection(id) {
+      navTabs.forEach(function (a) {
+        var active = a.getAttribute('href') === '#' + id;
+        a.classList.toggle('active', active);
+        if (active) {
+          a.setAttribute('aria-current', 'location');
+          // Keep the active tab visible in the horizontal strip only.
+          var wanted = a.offsetLeft - (navBar.clientWidth - a.offsetWidth) / 2;
+          if (Math.abs(navBar.scrollLeft - wanted) > 30) {
+            navBar.scrollTo({ left: wanted, behavior: 'smooth' });
+          }
+        } else {
+          a.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    function syncActiveNav() {
+      if (Date.now() < navClickUntil) return;
+      var boxTop = scrollBox.getBoundingClientRect().top;
+      var threshold = boxTop + 70;
+      var active = navSections[0];
+      navSections.forEach(function (section) {
+        if (section.getBoundingClientRect().top <= threshold) active = section;
+      });
+      if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight - 5) {
+        active = navSections[navSections.length - 1];
+      }
+      if (active) activateSection(active.id);
+    }
+
+    var navScheduled = false;
+    scrollBox.addEventListener('scroll', function () {
+      if (!navScheduled) {
+        navScheduled = true;
+        requestAnimationFrame(function () { syncActiveNav(); navScheduled = false; });
+      }
+    }, { passive: true });
+    window.addEventListener('resize', syncActiveNav);
+
+    navTabs.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var id = a.getAttribute('href').slice(1);
+        var section = document.getElementById(id);
+        if (!section) return;
+        navClickUntil = Date.now() + 850;
+        activateSection(id);
+        section.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+          block: 'start'
+        });
+        history.replaceState(null, '', '#' + id);
+      });
     });
-  });
+
+    syncActiveNav();
+  }
+
+  // --- Publication search + tag filter ---
+  var pubSearch = document.getElementById('pubSearch');
+  var chipBar = document.getElementById('filterChips');
+  var pubCount = document.getElementById('pubCount');
+  var filterable = Array.prototype.slice.call(
+    document.querySelectorAll('#section-pubs .bibliography > li[data-tags]')
+  );
+
+  if (filterable.length) {
+    var activeTag = 'All';
+
+    function applyFilter() {
+      var q = pubSearch ? pubSearch.value.toLowerCase().trim() : '';
+      var shownPubs = 0, totalPubs = 0, shownReports = 0, totalReports = 0;
+      filterable.forEach(function (li) {
+        var inPubs = !li.closest('#reports-block');
+        if (inPubs) totalPubs++; else totalReports++;
+        var tags = (li.getAttribute('data-tags') || '').split('|');
+        var text = (li.getAttribute('data-search') || '').toLowerCase();
+        var ok = (activeTag === 'All' || tags.indexOf(activeTag) !== -1) &&
+                 (!q || text.indexOf(q) !== -1);
+        li.hidden = !ok;
+        if (ok) { if (inPubs) shownPubs++; else shownReports++; }
+      });
+      if (pubCount) {
+        pubCount.textContent = 'Showing ' + shownPubs + ' of ' + totalPubs +
+          ' publications \u00B7 ' + shownReports + ' of ' + totalReports + ' technical reports';
+      }
+    }
+
+    if (chipBar) {
+      chipBar.addEventListener('click', function (e) {
+        var chip = e.target.closest('.filter-chip');
+        if (!chip) return;
+        activeTag = chip.getAttribute('data-tag');
+        chipBar.querySelectorAll('.filter-chip').forEach(function (c) {
+          c.classList.toggle('selected', c === chip);
+        });
+        applyFilter();
+      });
+    }
+    if (pubSearch) pubSearch.addEventListener('input', applyFilter);
+    applyFilter();
+  }
 
   // --- Start Menu Toggle ---
   var startBtn = document.getElementById('win98-start-btn');

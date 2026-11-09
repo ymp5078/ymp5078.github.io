@@ -9,6 +9,4 @@ I am currently an Applied Scientist at <a href="https://mistral.ai/">Mistral AI<
 
 ## Research Interests
 
-- **Computer Vision:** robustness improvement, video understanding, medical image analysis
-- **Multi-Modality Learning:** cross-modal learning, vision-language model, generative model
-- **Large Language Model:** pre-training, post-training
+I am interested in both advancing AI methodologies and applying them to real-world problems. My work spans computer vision, multimodal learning, and large language models, with applications across diverse domains.

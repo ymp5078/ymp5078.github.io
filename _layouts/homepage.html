@@ -31,8 +31,8 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="./assets/css/win98.css">
-    <link rel="stylesheet" href="./assets/css/publications-win98.css">
+    <link rel="stylesheet" href="./assets/css/win98.css?v=20261108">
+    <link rel="stylesheet" href="./assets/css/publications-win98.css?v=20261108">
 
     <script type="text/javascript">
       function toggleVis(link) {
@@ -153,34 +153,56 @@
 
             <div class="pixel-separator"></div>
 
-            <!-- Tabs -->
-            <div class="tab-bar">
-              <div class="tab active" data-tab="tab-about">&#128203; About Me</div>
-              <div class="tab" data-tab="tab-news">&#128240; News</div>
-              <div class="tab" data-tab="tab-pubs">&#128221; Publications</div>
-              <div class="tab" data-tab="tab-services">&#128295; Services</div>
-            </div>
+            <!-- Floating Section Navigation (sticky inside the browser window) -->
+            <nav class="tab-bar" id="sectionNav" aria-label="Page sections">
+              <a class="tab active" href="#section-about">&#128203; About Me</a>
+              <a class="tab" href="#section-news">&#128240; News</a>
+              <a class="tab" href="#section-pubs">&#128221; Publications</a>
+              <a class="tab" href="#section-services">&#128295; Services</a>
+            </nav>
 
             <div class="tab-content">
               <!-- About Me -->
-              <div class="tab-panel active" id="tab-about">
+              <section class="content-section" id="section-about">
                 {{ content }}
-              </div>
+              </section>
 
               <!-- News -->
-              <div class="tab-panel" id="tab-news">
+              <section class="content-section" id="section-news">
                 {% include news.md %}
-              </div>
+              </section>
 
               <!-- Publications -->
-              <div class="tab-panel" id="tab-pubs">
+              <section class="content-section" id="section-pubs">
+                <h2 id="publications" style="margin: 2px 0px 8px;">Selected Publications</h2>
+                <div class="pub-toolbar">
+                  <input type="search" class="win98-search" id="pubSearch" placeholder="Search papers, authors, topics..." aria-label="Search papers">
+                  <div class="filter-chips" id="filterChips">
+                    <button class="filter-chip selected" data-tag="All">All</button>
+                    <button class="filter-chip" data-tag="Computer Vision">Computer Vision</button>
+                    <button class="filter-chip" data-tag="3D Vision">3D Vision</button>
+                    <button class="filter-chip" data-tag="Multimodal">Multimodal</button>
+                    <button class="filter-chip" data-tag="Audio">Audio</button>
+                    <button class="filter-chip" data-tag="Medical AI">Medical AI</button>
+                    <button class="filter-chip" data-tag="Safety">Safety</button>
+                    <button class="filter-chip" data-tag="Robotics">Robotics</button>
+                    <button class="filter-chip" data-tag="Foundation Models">Foundation Models</button>
+                    <button class="filter-chip" data-tag="Time Series">Time Series</button>
+                  </div>
+                </div>
+                <div class="pub-count" id="pubCount"></div>
+                <h3 class="sub-head">Research Papers</h3>
                 {% include publications.md %}
-              </div>
+                <h3 class="sub-head" id="technical-reports">Technical Reports</h3>
+                <div id="reports-block">
+                  {% include reports.md %}
+                </div>
+              </section>
 
               <!-- Services -->
-              <div class="tab-panel" id="tab-services">
+              <section class="content-section" id="section-services">
                 {% include services.md %}
-              </div>
+              </section>
             </div>
 
             <div class="pixel-separator"></div>
@@ -273,7 +295,7 @@
       </div>
     </div>
 
-    <script src="./assets/js/win98.js"></script>
+    <script src="./assets/js/win98.js?v=20261108"></script>
     <script src="./assets/js/emu-pet.js"></script>
   </body>
 </html>
